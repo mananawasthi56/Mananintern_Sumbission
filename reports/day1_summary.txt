@@ -1,0 +1,56 @@
+DAY 1 - DATA INGESTION SUMMARY
+
+Datasets Loaded:
+
+1. Fund Master
+2. NAV History
+3. AUM by Fund House
+4. Monthly SIP Inflows
+5. Category Inflows
+6. Industry Folio Count
+7. Scheme Performance
+8. Investor Transactions
+9. Portfolio Holdings
+10. Benchmark Indices
+
+Data Quality Checks Performed:
+
+* Dataset shape verification
+* Column datatype verification
+* Missing value analysis
+* Duplicate record analysis
+
+Observations:
+
+* All datasets loaded successfully.
+* No duplicate records found in any dataset.
+* Most datasets contain no missing values.
+* Monthly SIP Inflows dataset contains 12 missing values in yoy_growth_pct.
+* Missing YoY values appear to be expected because prior-year comparison data is unavailable for the earliest months.
+
+AMFI Validation:
+
+* Total AMFI Codes in Fund Master: 40
+* Total AMFI Codes in NAV History: 40
+* Missing Codes: 0
+* Coverage: 100%
+
+Fund Master Exploration:
+
+* Multiple fund houses identified.
+* Multiple scheme categories and sub-categories present.
+* Risk categories available for all schemes.
+
+Live NAV Fetching:
+
+* Successfully fetched live NAV data from MFAPI.
+* Downloaded NAV history for:
+
+  * SBI Bluechip
+  * ICICI Bluechip
+  * Nippon Large Cap
+  * Axis Bluechip
+  * Kotak Bluechip
+
+Conclusion:
+The datasets passed initial ingestion and validation checks and are ready for exploratory analysis and dashboard development.
